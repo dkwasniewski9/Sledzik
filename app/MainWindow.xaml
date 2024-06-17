@@ -1,0 +1,24 @@
+﻿<Window x:Class="dkwasniewskiApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dkwasniewskiApp"
+        mc:Ignorable="d"
+        Title="Śledzik" Height="468" Width="800">
+    <Grid Height="450" Width="800">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="399*"/>
+            <ColumnDefinition Width="401*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Śledzona aplikacja&#xD;&#xA;" HorizontalAlignment="Left" Margin="150,43,0,0" VerticalAlignment="Top" Name="TrackedAppName" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="31" Grid.Column="1"/>
+        <Button Content="Zmień aplikacje" HorizontalAlignment="Left" Margin="264,393,0,0" VerticalAlignment="Top" Name="TrackedAppFileDialog" Click="TrackedAppFileDialog_Click" Width="100" Height="30" Grid.Column="1"/>
+        <Label Content="Info o aplikacji" HorizontalAlignment="Left" Margin="40,30,0,0" VerticalAlignment="Top" Name="TrackedAppInfo"/>
+        <Button Content="Odśwież" HorizontalAlignment="Left" Margin="40,393,0,0" VerticalAlignment="Top" Name="RefreshButton" Click="RefreshButton_Click" Width="100" Height="30"/>
+        <Canvas Height="200px" Width="600px" Name="graph" Margin="76,173,124,77" Grid.ColumnSpan="2"/>
+        <Label Content="RAM&#xD;&#xA;" HorizontalAlignment="Left" Margin="328,234,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.463,0.387" Height="26" Foreground="Blue" Grid.Column="1"/>
+        <Label Content="CPU&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="328,271,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.463,0.387" Height="26" Foreground="Red" Grid.Column="1"/>
+        <Button Content="Wyczyść dziennik" HorizontalAlignment="Left" Margin="168,393,0,0" VerticalAlignment="Top" Name="ClearLogButton" Click="ClearLogButton_Click" Width="100" Height="30"/>
+
+    </Grid>
+</Window>
